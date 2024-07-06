@@ -3,9 +3,12 @@
 // números pares desde 2 hasta 1000
 const prompt = require('prompt-sync')({ siging: true})
 
-for (let i = 1; i <= 99; i+= 2) {
-    console.log( i); 
+//  ---------  Estructura FOR con numeros IMPARES  ---------------
+for (let impares = 1; impares <= 999; impares+= 2) {
+    console.log( impares); 
    }
-   for (let i = 2; i <= 100; i+= 2) {
-    console.log( i); 
-   }
+
+//  ---------  Estructura FOR con numeros PARES  ---------------
+for (let pares = 2; pares <= 1000; pares+= 2) {
+console.log(pares); 
+}

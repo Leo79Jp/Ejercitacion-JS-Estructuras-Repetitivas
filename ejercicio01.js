@@ -27,6 +27,7 @@ const prompt = require('prompt-sync')({ siging: true }) // Paso adicional: npm i
 //   suma += nota
 //   nota = parseInt(prompt(`Ingrese la nota N° ${++cantidad}: `))
 // }
+
 let nota = 0
 let cantidad = 0
 let suma = 0

@@ -2,6 +2,7 @@
 // Hacer los algoritmos que calculen el promedio de una serie de notas hasta que se ingrese una nota
 // negativa, utilizar las tres estructuras repetitivas.
 const prompt = require('prompt-sync')({ siging: true }) // Paso adicional: npm i prompt-sync
+//  ------------------------------ Asi lo hizo el!! -------------------------------------------------
 
 // let nota = 0
 // let suma = 0
@@ -27,6 +28,8 @@ const prompt = require('prompt-sync')({ siging: true }) // Paso adicional: npm i
 //   suma += nota
 //   nota = parseInt(prompt(`Ingrese la nota N° ${++cantidad}: `))
 // }
+
+// ------------------------------------  Asi lo hice yo! ---------------------------------------
 
 let nota = 0
 let cantidad = 0

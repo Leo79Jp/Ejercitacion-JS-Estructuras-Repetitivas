@@ -13,3 +13,35 @@
 // │ Ingreso     │ 15        │ 40             │ 55             │
 // │ Egreso      │ 60        │ 55             │ NO ALCANZA     │
 // └─────────────┴───────────┴────────────────┴────────────────┘
+const prompt = require('prompt-sync')({ siging: true })
+let cantIngreso = 0
+let cantEgreso = 0
+let stockInicial = 100
+let stockFinal = 0
+let vueltas = 1
+do {
+    tipoMovimiento = parseInt(prompt(`Ingrese el tipo de movimiento "1 = Ingreso" o  "2 = Egreso" : `))
+    if  (tipoMovimiento == "1"){
+        Movimiento = parseInt(prompt(`Ingrese la cantidad que Ingreso : `))
+        stockFinal= stockInicial+ Movimiento
+        stockInicial+=Movimiento
+        cantIngreso+=Movimiento
+    }else if (tipoMovimiento == "2"){
+        Movimiento = parseInt(prompt(`Ingrese la cantidad que Egreso : `))
+        if( stockInicial<Movimiento){
+            console.log(`No Alcanza, se llevan ${stockInicial} cajones`);
+            cantEgreso+=stockInicial
+            stockFinal= 0
+            stockInicial=0
+        }else{
+            stockFinal= stockInicial- Movimiento
+            stockInicial-=Movimiento
+            cantEgreso+=Movimiento
+        }
+    }
+    vueltas++
+} while (vueltas<=5);
+
+console.log(`La cantidad de cajones que ingresaron fueron: ${cantIngreso}`);
+console.log(`La cantidad de cajones que egresaron fueron: ${cantEgreso}`);
+console.log(`El stock Final de cajones es de: ${stockFinal}`);

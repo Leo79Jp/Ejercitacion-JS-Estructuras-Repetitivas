@@ -13,3 +13,24 @@
 // │ 3            │ 9          │ 8                       │ 8                       │
 // │ Final        │ -          │ -                       │ 8                       │
 // └──────────────┴────────────┴─────────────────────────┴─────────────────────────┘
+const prompt = require('prompt-sync')({ siging: true })
+
+let Suben = 0
+let Bajan = 0
+let totalPersonas = 0
+let n = parseInt(prompt(`Ingrese cantidad de personas que suben al autobus : `))
+let x = parseInt(prompt(`Ingrese cantidad de paradas intermedias : `))
+totalPersonas+=n
+console.log(`Suben inicialmente unas ${n} personas`);
+
+for (i =0; i<x; i++){
+    Suben+= 3
+    Bajan = totalPersonas/2 
+    totalPersonas= Bajan + Suben
+
+    console.log(`Suben ${Suben} personas en la parada Nº ${i+1}`);
+    console.log(`Bajan ${Bajan} personas en la parada Nº ${i+1}`);
+    console.log(`En el autobus hay unas ${totalPersonas} personas`);
+    }
+    console.log(`En el final del trayecto quedan ${totalPersonas} en el Autobus`);
+

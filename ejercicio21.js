@@ -16,3 +16,4 @@ for (let i = 0; i <= semanas; i++) {
     salarioTotal+= salario
     console.log(`El salarion acumuladi hasta esta semana es: ${salarioTotal}`);
 }
+
